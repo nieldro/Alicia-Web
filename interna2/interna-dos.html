@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alicia en el País de las Maravillas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="../Icono.svg">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <nav class="menu" id="menu">
+        <ul>
+          <li><a  href="../index.html">INICIO</a></li>
+          <li><a href="../interna1/primera-interna.html">PELICULA 1</a></li>
+          <li><a id="estoy" href="interna-dos.html">PELICULA 2</a></li>
+          <li><a href="../interna3/index.html">PELICULA 3</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="banner">
+    <img src="Banner.svg" alt="Alicia en el País de las Maravillas">
+    <div class="flecha"></div>
+  </section>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+      toggle.classList.toggle('open');
+    });
+  </script>
+
+
+<section class="info">
+  <div class="info-content">
+    <p><strong>Título original:</strong> Alice in Wonderland</p>
+    <p><strong>Título en español:</strong> Alicia en el País de las Maravillas</p>
+    <p><strong>Año de estreno:</strong> 2010</p>
+    <p><strong>País de origen:</strong> Estados Unidos</p>
+    <p><strong>Duración:</strong> 108 minutos</p>
+    <p><strong>Género:</strong> Fantasía / Aventura / Acción</p>
+    <p><strong>Idioma original:</strong> Inglés</p>
+    <p><strong>Clasificación:</strong> PG (apta para todo público con supervisión parental)</p>
+    <p><strong>Director:</strong> Tim Burton</p>
+  </div>
+</section>
+
+
+<section class="personajes-section">
+  <div class="titulo-seccion">
+    <h2>PERSONAJES PRINCIPALES</h2>
+  </div>
+
+  <div class="personajes-grid">
+    <div class="personaje">
+      <div class="marco">
+        <img src="Actor 01.svg" alt="Alicia">
+      </div>
+      <p class="nombre">Alicia Kingsleigh</p>
+      <p class="actor">Mia Wasikowska</p>
+    </div>
+
+    <div class="personaje">
+      <div class="marco">
+        <img src="Actor 02.svg" alt="Sombrerero">
+      </div>
+      <p class="nombre">Sombrerero Loco (Tarrant Hightopp)</p>
+      <p class="actor">Johnny Depp</p>
+    </div>
+
+    <div class="personaje">
+      <div class="marco">
+        <img src="Actor 03.svg" alt="Reina Roja">
+      </div>
+      <p class="nombre">Reina Roja (Iracebeth de Crims)</p>
+      <p class="actor">Helena Bonham Carter</p>
+    </div>
+  </div>
+  <div class="personajes-grid">
+    <div class="personaje">
+      <div class="marco">
+        <img src="Actor 04.svg" alt="Alicia">
+      </div>
+      <p class="nombre">Reina Blanca (Mirana de Marmoreal)
+ </p>
+      <p class="actor">Anne Hathaway</p>
+    </div>
+
+    <div class="personaje">
+      <div class="marco">
+        <img src="Actor 05.svg" alt="Sombrerero">
+      </div>
+      <p class="nombre">Gato de Cheshire</p>
+      <p class="actor">voz de Stephen Fry</p>
+    </div>
+
+    <div class="personaje">
+      <div class="marco">
+        <img src="Actor 06.svg" alt="Reina Roja">
+      </div>
+      <p class="nombre">Liebre de Marzo</p>
+      <p class="actor"> voz de Paul Whitehouse</p>
+    </div>
+  </div>
+  <div class="personajes-grid">
+    <div class="personaje">
+      <div class="marco">
+        <img src="Actor 07.svg" alt="Alicia">
+      </div>
+      <p class="nombre">Tweedledee y Tweedledum</p>
+      <p class="actor"> Matt Lucas</p>
+    </div>
+
+    <div class="personaje">
+      <div class="marco">
+        <img src="Actor 08.svg" alt="Sombrerero">
+      </div>
+      <p class="nombre">Jabberwocky</p>
+      <p class="actor">voz de Christopher Lee</p>
+    </div>
+
+    <div class="personaje">
+      <div class="marco">
+        <img src="Actor 09.svg" alt="Reina Roja">
+      </div>
+      <p class="nombre">Conejo Blanco (McTwisp)</p>
+      <p class="actor">voz de Michael Sheen</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="seccion-video-texto">
+  <div class="contenedor-video-texto">
+   <div class="video-izquierda">
+  <iframe
+    width="100%"
+    height="315"
+    src="https://www.youtube.com/embed/Gyu7zvy8leg"
+    title="Alice in Wonderland Trailer"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+
+
+    <div class="texto-derecha">
+      <p>
+        Alicia Kingsleigh, una joven soñadora e inconforme con las reglas de la sociedad victoriana,
+        asiste a una fiesta en la que descubren que está a punto de ser comprometida en matrimonio
+        sin su consentimiento. Confundida y agobiada, sigue a un misterioso conejo blanco con chaleco
+        y reloj, cayendo accidentalmente en un profundo agujero que la lleva a un mundo mágico
+        llamado Infraterra (el verdadero País de las Maravillas).
+      </p>
+      <p>
+        Allí se reencuentra con extravagantes personajes como el Sombrerero Loco, el Gato de Cheshire,
+        la Liebre de Marzo y la Oruga Absolem, quienes le revelan que está destinada a cumplir una
+        antigua profecía: derrotar al temible Jabberwocky y devolver el trono a la bondadosa Reina Blanca,
+        derrocando así a la cruel Reina Roja.
+      </p>
+      <p>
+        A lo largo de su aventura, Alicia debe enfrentarse no solo a las criaturas fantásticas y los desafíos
+        del reino, sino también a sus propios miedos y dudas. En el proceso, descubre su verdadera identidad,
+        su valentía y su destino.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="carrusel-container">
+  <div class="carrusel">
+    <div class="slide"><img src="carrusel 01.svg" alt="Imagen 1"></div>
+    <div class="slide"><img src="carrusel 02.svg" alt="Imagen 2"></div>
+    <div class="slide"><img src="carrusel 03.svg" alt="Imagen 3"></div>
+    <div class="slide"><img src="carrusel 01.svg" alt="Imagen 1"></div>
+    <div class="slide"><img src="carrusel 02.svg" alt="Imagen 2"></div>
+    <div class="slide"><img src="carrusel 03.svg" alt="Imagen 3"></div>
+    
+  </div>
+</section>
+
+
+
+
+</body>
+</html>

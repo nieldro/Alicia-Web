@@ -1,0 +1,489 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+/* HEADER */
+.navbar {
+  background-color: #7b0000; /* Rojo vino más parecido a la imagen */
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 40px;
+}
+
+/* Menu */
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #7b0000;
+  padding: 10px 25px;
+  border-radius: 3px;
+}
+
+.menu li {
+  margin-left: 25px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+
+
+#estoy {
+  color: #fbff00;
+}
+
+/* BOTÓN HAMBURGUESA */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s;
+}
+
+.menu-toggle.open {
+  transform: rotate(90deg);
+}
+
+/* BANNER */
+.banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* FLECHA */
+.flecha {
+  position: absolute;
+  top: 40%;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  border-left: 5px solid #c30000;
+  border-bottom: 5px solid #c30000;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.flecha:hover {
+  filter: drop-shadow(0 0 5px #ff0000);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+    background-color: #111;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    display: none;
+  }
+
+  .menu.active ul {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+    background-color: #7b0000;
+  }
+
+  .menu li {
+    margin: 15px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-right: 15px;
+  }
+
+  .flecha {
+    display: none;
+  }
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/*SEGUNDA SECCION*/
+
+/* SECCIÓN INFO */
+.info {
+  background-image: url("Degradado\ corazones.svg"); /* 🔴 Cambia esta URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 60px 20px;
+  position: relative;
+}
+
+/* Capa oscura para contraste */
+.info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Contenido */
+.info-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.info-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+/* ANIMACIÓN DE FLOTACIÓN */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .info-content p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .info {
+    background-attachment: scroll;
+    padding: 40px 15px;
+  }
+
+  .info-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-content p {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* tercera seccion*/
+
+.personajes-section {
+  background: linear-gradient(to bottom, #000000 0%, #7a0000 100%);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Título tipo cinta */
+.titulo-seccion {
+  position: relative;
+  display: inline-block;
+  background-color: #6b6fa3; /* Azul moradito */
+  color: black;
+  padding: 15px 200px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 60px;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .titulo-seccion {
+    padding: 15px 120px !important;
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 425px) {
+  .titulo-seccion{
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 424px){
+.titulo-seccion{
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 500px){
+.titulo-seccion{
+    font-size: 19px;
+  }
+}
+
+/* GRID principal */
+.personajes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-items: center;
+  margin-bottom: 50px;
+}
+
+/* Tarjetas de personajes */
+.personaje {
+  max-width: 300px;
+}
+
+.marco {
+  border: 10px solid transparent;
+  padding: 10px;
+  background-image: url("Fondocartas.svg");
+}
+
+.marco img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.nombre {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #dcdcdc;
+}
+
+.actor {
+  font-size: 0.9rem;
+  color: #bfbfbf;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .personajes-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .personajes-grid {
+    grid-template-columns: 1fr;
+  }
+  .titulo-seccion {
+  
+  padding: 0px;
+  
+}
+
+}
+
+
+
+
+
+/*Cuarta seccion*/
+
+.seccion-video-texto {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("Fondocartas.svg"); /* 🔹 Cambia esta URL */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 5%;
+}
+
+.contenedor-video-texto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.video-izquierda {
+  flex: 1 1 500px;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.texto-derecha {
+  flex: 1 1 500px;
+  max-width: 600px;
+  color: white;
+  font-size: 12px;
+  line-height: 1.8;
+  text-align: justify;
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+/* 🔥 Efecto de humo oscuro detrás del texto */
+.texto-derecha::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: radial-gradient(rgba(0, 0, 0, 0.8), transparent 70%);
+  filter: blur(20px);
+  z-index: -1;
+  opacity: 0.9;
+  animation: humoFlotante 6s ease-in-out infinite alternate;
+}
+
+@keyframes humoFlotante {
+  0% { transform: translateY(0px) scale(1); opacity: 0.9; }
+  100% { transform: translateY(-10px) scale(1.05); opacity: 0.7; }
+}
+
+/* 📱 Responsive */
+@media (max-width: 1024px) {
+  .contenedor-video-texto {
+    flex-direction: column;
+  }
+
+  .video-izquierda iframe {
+    width: 100%;
+    height: 250px;
+  }
+
+  .texto-derecha {
+    font-size: 0.95rem;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .seccion-video-texto {
+    padding: 30px 20px;
+  }
+
+  .texto-derecha {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+}
+
+
+
+/* quinta seccion */
+
+
+.carrusel-container {
+  overflow: hidden;
+  width: 100%;
+  background: #000;
+  margin-top: 0;
+  padding: 0;
+}
+
+.carrusel {
+  display: flex;
+  animation: scroll 25s linear infinite;
+}
+
+.slide {
+  flex: 0 0 33.33%; /* 3 imágenes visibles en pantallas grandes */
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Para celulares: solo 1 imagen visible */
+@media (max-width: 768px) {
+  .slide {
+    flex: 0 0 100%;
+  }
+}
+
+/* Animación infinita */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+
+
+
+/* 🚫 Bloqueo total de scroll horizontal */
+html, body {
+  overflow-x: hidden !important;
+  width: 100%;
+}
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+body {
+  position: relative;
+  left: 0;
+  right: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

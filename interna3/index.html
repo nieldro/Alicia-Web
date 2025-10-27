@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alicia en el País de las Maravillas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="../Icono.svg">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <nav class="menu" id="menu">
+        <ul>
+          <li><a href="../index.html">INICIO</a></li>
+          <li><a href="../interna1/primera-interna.html">PELICULA 1</a></li>
+          <li><a href="../interna2/interna-dos.html">PELICULA 2</a></li>
+          <li><a id="estoy" href="index.html">PELICULA 3</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="banner">
+    <img src="Banner.svg" alt="Alicia en el País de las Maravillas">
+    <div class="flecha"></div>
+  </section>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+      toggle.classList.toggle('open');
+    });
+  </script>
+<!-- SECCIÓN HERO CON ESPEJO -->
+<section class="hero">
+  <div class="hero-content">
+    
+    <!-- Imagen del espejo -->
+    <img src="Espejo.svg" alt="Espejo Decorativo" class="mirror">
+
+    <!-- Texto dentro del espejo -->
+    <div class="hero-text">
+      <p>
+        Después de varios años viajando por el mundo como capitana de un barco, Alicia Kingsleigh regresa a Londres y descubre que su vida en el mundo real enfrenta dificultades. En medio de sus problemas, se encuentra con el espejo mágico que la transporta nuevamente al País de las Maravillas, donde sus amigos la necesitan.
+
+Allí, Alicia descubre que el Sombrerero Loco ha perdido su alegría y su cordura al creer que su familia —los Hightopper— podría seguir con vida. Para ayudarlo, Alicia debe enfrentarse a una nueva fuerza: Tiempo, una enigmática criatura mitad hombre y mitad máquina que controla el flujo temporal. Desafiando sus advertencias, ella roba el Cronosfera, un artefacto que le permite viajar al pasado.
+
+Durante su travesía por el tiempo, Alicia presencia los orígenes y secretos de muchos personajes, incluidos la Reina Roja y la Reina Blanca, comprendiendo las causas de su enemistad y los errores que marcaron su destino. Sin embargo, alterar el pasado amenaza con destruir el País de las Maravillas.
+
+A través de su viaje, Alicia aprende una valiosa lección sobre la importancia de aceptar el paso del tiempo, valorar el presente y mantener viva la esperanza. Finalmente, logra reconciliar a sus amigos y restablecer el equilibrio en ambos mundos: el real y el imaginario.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="carrusel-container">
+  <div class="carrusel">
+    <div class="slide"><img src="carsusel 01.svg" alt="Imagen 1"></div>
+    <div class="slide"><img src="carrusel 02.svg" alt="Imagen 2"></div>
+    <div class="slide"><img src="carrusel 03.svg" alt="Imagen 3"></div>
+    <div class="slide"><img src="carsusel 01.svg" alt="Imagen 1"></div>
+    <div class="slide"><img src="carrusel 02.svg" alt="Imagen 2"></div>
+    <div class="slide"><img src="carrusel 03.svg" alt="Imagen 3"></div>
+    
+  </div>
+</section>
+
+
+<!-- SECCIÓN 2: RELOJ + VIDEO -->
+<section class="section-clock">
+  <div class="clock-content">
+
+    <!-- Imagen del reloj -->
+    <div class="clock-wrapper">
+      <img src="Reloj.svg" alt="Reloj Grande" class="clock-img">
+
+      <!-- Texto dentro del reloj -->
+      <div class="clock-text">
+        <p>
+          Dedicada a: Alan Rickman (fallecido antes del estreno del filme)<br><br>
+          Recaudación mundial: Aproximadamente USD 299 millones.<br><br>
+          Crítica: Elogiada por su apartado visual y efectos digitales, aunque recibió comentarios mixtos sobre su guion.<br><br>
+          Mensaje central: El valor del tiempo, la importancia del perdón y la madurez personal.
+        </p>
+      </div>
+    </div>
+
+    <!-- Video -->
+    <div class="video-wrapper">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/NTv8awTEWQU"
+        title="YouTube video player" frameborder="0" allowfullscreen>
+      </iframe>
+      <a class="video-link" href="https://www.youtube.com/watch?v=NTv8awTEWQU" target="_blank">
+        
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SECCIÓN 3: TRES ESPEJOS -->
+<section class="three-mirrors">
+  <div class="mirrors-container">
+
+    <!-- ESPEJO 1 -->
+    <div class="mirror-box">
+      <img src="Espejo.svg" alt="Espejo" class="mirror-img">
+      <div class="mirror-text">
+        <p>
+          Título original: Alice Through the Looking Glass<br><br>
+          Título en español: Alicia a través del espejo<br><br>
+          Año de estreno: 2016<br><br>
+          País de origen: Estados Unidos<br><br>
+          Duración: 113 minutos<br><br>
+          Género: Fantasía / Aventura / Drama
+        </p>
+      </div>
+    </div>
+
+    <!-- ESPEJO 2 -->
+    <div class="mirror-box">
+      <img src="Espejo.svg" alt="Espejo" class="mirror-img">
+      <div class="mirror-text">
+        <p>
+          Duración: 113 minutos<br><br>
+          Género: Fantasía / Aventura / Drama<br><br>
+          Idioma original: Inglés<br><br>
+          Clasificación: PG (Apta con supervisión parental)<br><br>
+          Director: James Bobin<br><br>
+          Productores: Tim Burton, Joe Roth, Suzanne Todd, Jennifer Todd
+        </p>
+      </div>
+    </div>
+
+    <!-- ESPEJO 3 -->
+    <div class="mirror-box">
+      <img src="Espejo.svg" alt="Espejo" class="mirror-img">
+      <div class="mirror-text">
+        <p>
+          Guion: Linda Woolverton<br><br>
+          (basado en las novelas Through the Looking-Glass and What Alice Found There de Lewis Carroll)<br><br>
+          Compañías productoras: Walt Disney Pictures / Roth Films / Team Todd / Tim Burton Productions<br><br>
+          Distribuidora: Walt Disney Studios Motion Pictures
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  </body>
+</html>

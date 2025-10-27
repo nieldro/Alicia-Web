@@ -1,0 +1,527 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+/* HEADER */
+.navbar {
+  background-color: #0a383d; /* Rojo vino más parecido a la imagen */
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 40px;
+}
+
+/* Menu */
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #0a383d;
+  padding: 10px 25px;
+  border-radius: 3px;
+}
+
+.menu li {
+  margin-left: 25px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #e4c82a;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+#estoy {
+  color: #ffffff;
+}
+
+/* BOTÓN HAMBURGUESA */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s;
+}
+
+.menu-toggle.open {
+  transform: rotate(90deg);
+}
+
+/* BANNER */
+.banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* FLECHA */
+.flecha {
+  position: absolute;
+  top: 40%;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  border-left: 5px solid #0a383d;
+  border-bottom: 5px solid #0a383d;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.flecha:hover {
+  filter: drop-shadow(0 0 5px #0a383d);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+    background-color: #111;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    display: none;
+  }
+
+  .menu.active ul {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+    background-color: #0a383d;
+  }
+
+  .menu li {
+    margin: 15px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-right: 15px;
+  }
+
+  .flecha {
+    display: none;
+  }
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+/* SEGUNDA SECCION*/
+
+/* ==== SECCIÓN ===== */
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: url('Degradado.svg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 30px;
+}
+
+/* Contenedor general */
+.hero-content {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Imagen del espejo */
+.mirror {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  z-index: 1;
+}
+
+/* Texto dentro del espejo */
+.hero-text {
+      position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 355px;
+    color: white;
+    font-size: 13PX;
+    line-height: 1.5;
+    z-index: 2;
+}
+
+/* ========= TELEVISOR / MONITOR GRANDE ========= */
+@media(min-width:1600px) {
+  .mirror {
+    max-width: 915px;
+  }
+  .hero-text {
+    max-width: 381px;
+    font-size: 13px;
+  }
+}
+
+/* ========= TABLETS ========= */
+@media(max-width:1024px) {
+  .mirror {
+    max-width: 800px;
+  }
+  .hero-text {
+    width: 40%;
+    font-size: 11px;
+  }
+}
+
+/* ========= CELULARES GRANDES ========= */
+@media(max-width:768px) {
+  .mirror {
+    display: none; /* Se oculta el espejo */
+  }
+  .hero-text {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    background: rgba(0,0,0,.6);
+    border-radius: 10px;
+    padding: 20px;
+  }
+}
+
+/* ========= CELULARES PEQUEÑOS ========= */
+@media(max-width:480px) {
+  .hero-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}
+
+
+
+/* TERCERA seccion */
+
+
+.carrusel-container {
+  overflow: hidden;
+  width: 100%;
+  background: #000;
+  margin-top: 0;
+  padding: 0;
+}
+
+.carrusel {
+  display: flex;
+  animation: scroll 25s linear infinite;
+}
+
+.slide {
+  flex: 0 0 33.33%; /* 3 imágenes visibles en pantallas grandes */
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Para celulares: solo 1 imagen visible */
+@media (max-width: 768px) {
+  .slide {
+    flex: 0 0 100%;
+  }
+}
+
+/* Animación infinita */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+/*Cuarta seccion*/
+
+/* ==== SECCIÓN 2: RELOJ Y VIDEO ==== */
+.section-clock {
+  width: 100%;
+  min-height: 100vh;
+  background: url('Fondo\ 01.svg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+/* Contenedor general */
+.clock-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 90%;
+  max-width: 1300px;
+}
+
+/* Reloj */
+.clock-wrapper {
+  position: relative;
+  width: 50%;
+}
+
+.clock-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Texto dentro del reloj */
+.clock-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  max-width: 280px;
+  text-align: center;
+  color: black;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Video */
+.video-wrapper {
+  width: 50%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.video-link {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: white;
+}
+
+/* ==== RESPONSIVE ==== */
+
+/* Televisores */
+@media(min-width:1600px) {
+  .clock-img {
+    max-width: 650px;
+  }
+  .clock-text {
+    font-size: 1.2rem;
+    max-width: 350px;
+  }
+  .video-wrapper iframe {
+    height: 380px;
+  }
+}
+
+/* Tablets */
+@media(max-width:1024px) {
+  .clock-content {
+    gap: 20px;
+  }
+  .clock-img {
+    max-width: 420px;
+  }
+  .clock-text {
+    font-size: 9px;
+  }
+}
+
+/* Celulares */
+@media(max-width:768px) {
+  .section-clock {
+    background: #232f2b; /* Color tomado del diseño */
+    width: 100%;
+    min-height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .clock-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Oculta el reloj */
+  .clock-wrapper {
+    display: none;
+  }
+
+  .video-wrapper {
+    width: 100%;
+  }
+
+  .video-wrapper iframe {
+    height: 250px;
+  }
+}
+
+/* Celulares pequeños */
+@media(max-width:480px) {
+  .video-wrapper iframe {
+    height: 210px;
+  }
+  .video-link {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* quinta seccion */
+
+/* ==== SECCIÓN 3: TRES ESPEJOS ==== */
+.three-mirrors {
+  width: 100%;
+  min-height: 100vh;
+  background: #b9a89a; /* Color exacto del diseño */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+/* Contenedor general */
+.mirrors-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1400px;
+  width: 100%;
+  animation: float 4.5s ease-in-out infinite;
+}
+
+/* Cada espejo */
+.mirror-box {
+  position: relative;
+  width: 32%;
+}
+
+.mirror-img {
+  width: 100%;
+  max-width: 460px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Texto dentro del espejo */
+.mirror-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  max-width: 180px;
+  text-align: center;
+  color: black;
+  font-size: 9px;
+  line-height: 1.45;
+}
+
+/* ANIMACIÓN FLOTANTE */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* ======= TV GRANDES ========== */
+@media(min-width:1600px) {
+  .mirror-img {
+    max-width: 450px;
+  }
+  .mirror-text {
+    font-size: 10px;
+    max-width: 169px;
+  }
+}
+
+/* ====== TABLETS ========== */
+@media(max-width:1024px) {
+  .mirrors-container {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .mirror-box {
+    width: 45%;
+  }
+}
+
+/* ====== CELULARES ========== */
+@media(max-width:768px) {
+  .mirrors-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .mirror-box {
+    width: 100%;
+  }
+  .mirror-text {
+    font-size: 7px;
+    width: 42%;
+  }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .mirror-text {
+        font-size: 9px;
+        width: 42%;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+ .mirror-text {
+        font-size: 9px;
+        width: 42%;
+    }
+}
